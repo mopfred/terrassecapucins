@@ -1,7 +1,6 @@
 <template>
   <div>
-    Adresse:
-	
+    test avis
   </div>
 </template>
 

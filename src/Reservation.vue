@@ -1,7 +1,6 @@
 <template>
   <div>
-    Adresse:
-	
+    test reservation
   </div>
 </template>
 
