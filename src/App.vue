@@ -8,29 +8,35 @@
     </ul>
 	<transition name="slide-fade">
 	  <div v-if="home">
-	    HOME
+	    <Home></Home>
 	  </div>
 	</transition>
 	<transition name="slide-fade">
 	  <div v-if="menu">
-	    MENU
+	    <Menu></Menu>
 	  </div>
 	</transition>
 	<transition name="slide-fade">
 	  <div v-if="contact">
-	    CONTACT
+	    <Contact></Contact>
 	  </div>
 	</transition>
 	<transition name="slide-fade">
 	  <div v-if="admin">
-	    ADMIN
+	    <Admin></Admin>
 	  </div>
 	</transition>
   </div>
 </template>
 
 <script>
+import Home from './Home.vue'
+import Menu from './Menu.vue'
+import Contact from './Contact.vue'
+import Admin from './Admin.vue'
+
   export default {
+  components: { Home, Menu, Contact, Admin },
     data () {
       return {
         home: true,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    test menu
+    test contact
   </div>
 </template>
 
