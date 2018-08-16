@@ -57,7 +57,7 @@ import Portfolio from './Portfolio.vue'
 import Admin from './Admin.vue'
 
   export default {
-  components: { Home, Menu, Contact, Reservation, Avis, Portfolio, Admin },
+    components: { Home, Menu, Contact, Reservation, Avis, Portfolio, Admin },
     data () {
       return {
         home: true,
@@ -139,7 +139,7 @@ import Admin from './Admin.vue'
 		this.avis = false
 		this.portfolio = true
 		this.admin = false
-	  }	  
+	  }
     }
   }
 </script>
@@ -155,32 +155,29 @@ html body {
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-	margin: 0;
-    overflow: hidden;
-	background-color: #333;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 li {
-    float: left;
+  float: left;
 }
 
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+  background-color: #111;
 }
 
-/* Les animations d'entrée (« enter ») et de sortie (« leave »)  */
-/* peuvent utiliser différentes fonctions de durée et de temps.  */
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
