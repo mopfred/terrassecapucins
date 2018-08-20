@@ -1,6 +1,6 @@
 <template>
   <div>
-    test menu
+    La terrasse des Capucins!
   </div>
 </template>
 

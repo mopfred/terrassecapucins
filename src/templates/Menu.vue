@@ -1,6 +1,6 @@
 <template>
-  <div>
-    test home
+  <div class="menu">
+  test menu
   </div>
 </template>
 
@@ -14,5 +14,7 @@
 </script>
 
 <style>
-
+.menu {
+ border:1px solid red;
+}
 </style>

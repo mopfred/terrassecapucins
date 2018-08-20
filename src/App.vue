@@ -7,70 +7,66 @@
 	  <li><a href="#" @click="showreservation">{{ reservationTitle }}</a></li>
 	  <li><a href="#" @click="showavis">{{ avisTitle }}</a></li>
 	  <li><a href="#" @click="showportfolio">{{ portfolioTitle }}</a></li>
-      <li><a href="#" @click="showadmin">{{ adminTitle }}</a></li>
+      <li style="float:right;"><a href="#" @click="showadmin">{{ adminTitle }}</a></li>
     </ul>
-	<transition name="slide-fade">
-	  <div v-if="home">
-	    <Home></Home>
-	  </div>
-	</transition>
-	<transition name="slide-fade">
-	  <div v-if="menu">
-	    <Menu></Menu>
-	  </div>
-	</transition>
-	<transition name="slide-fade">
-	  <div v-if="contact">
-	    <Contact></Contact>
-	  </div>
-	</transition>
-	<transition name="slide-fade">
-	  <div v-if="reservation">
-	    <Reservation></Reservation>
-	  </div>
-	</transition>
-	<transition name="slide-fade">
-	  <div v-if="avis">
-	    <Avis></Avis>
-	  </div>
-	</transition>
-	<transition name="slide-fade">
-	  <div v-if="portfolio">
-	    <Portfolio></Portfolio>
-	  </div>
-	</transition>
-	<transition name="slide-fade">
-	  <div v-if="admin">
-	    <Admin></Admin>
-	  </div>
-	</transition>
+	<div class="fullscreen">
+	  <transition name="slide-fade">
+	    <div class="fullscreen" v-if="toshow === 'home'">
+	      <Home></Home>
+	    </div>
+	  </transition>
+	  <transition name="slide-fade">
+	    <div class="fullscreen" v-if="toshow === 'menu'">
+	      <Menu></Menu>
+	    </div>
+	  </transition>
+	  <transition name="slide-fade">
+	    <div class="fullscreen" v-if="toshow === 'contact'">
+	      <Contact></Contact>
+	    </div>
+	  </transition>
+	  <transition name="slide-fade">
+	    <div class="fullscreen" v-if="toshow === 'reservation'">
+	      <Reservation></Reservation>
+	    </div>
+	  </transition>
+	  <transition name="slide-fade">
+	    <div class="fullscreen" v-if="toshow === 'avis'">
+	      <Avis></Avis>
+	    </div>
+	  </transition>
+	  <transition name="slide-fade">
+  	    <div class="fullscreen" v-if="toshow === 'portfolio'">
+	      <Portfolio></Portfolio>
+	    </div>
+	  </transition>
+	  <transition name="slide-fade">
+	    <div class="fullscreen" v-if="toshow === 'admin'">
+	      <Admin></Admin>
+	    </div>
+	  </transition>
+	</div>
   </div>
 </template>
 
 <script>
-import Home from './Home.vue'
-import Menu from './Menu.vue'
-import Contact from './Contact.vue'
-import Reservation from './Reservation.vue'
-import Avis from './Avis.vue'
-import Portfolio from './Portfolio.vue'
-import Admin from './Admin.vue'
+import Home from './templates/Home.vue'
+import Menu from './templates/Menu.vue'
+import Contact from './templates/Contact.vue'
+import Reservation from './templates/Reservation.vue'
+import Avis from './templates/Avis.vue'
+import Portfolio from './templates/Portfolio.vue'
+import Admin from './templates/Admin.vue'
 
   export default {
     components: { Home, Menu, Contact, Reservation, Avis, Portfolio, Admin },
     data () {
       return {
-        home: true,
-		menu: false,
-		contact: false,
-		reservation: false,
-		avis: false,
-		portfolio: false,
-		admin: false,
+	    toshow: 'home',
 		homeTitle: 'Accueil',
 		menuTitle: 'La carte',
 		contactTitle: 'Contact',
-		reservationTitle: 'Reservation',
+		reservationTitle: 'Réservation',
 		avisTitle: 'Avis',
 		portfolioTitle: 'Portfolio',
 		adminTitle: 'Admin'
@@ -78,80 +74,54 @@ import Admin from './Admin.vue'
     },
     methods: {
       showhome: function () {
-	    this.home = true
-		this.menu = false
-		this.contact = false
-		this.reservation = false
-		this.avis = false
-		this.portfolio = false
-		this.admin = false
+	    this.toshow = 'home'
 	  },
 	  showmenu: function () {
-	    this.home = false
-		this.menu = true
-		this.contact = false
-		this.reservation = false
-		this.avis = false
-		this.portfolio = false
-		this.admin = false
+	    this.toshow = 'menu'
 	  },
 	  showcontact: function () {
-	    this.home = false
-		this.menu = false
-		this.contact = true
-		this.reservation = false
-		this.avis = false
-		this.portfolio = false
-		this.admin = false
+	    this.toshow = 'contact'
 	  },
 	  showadmin: function () {
-	    this.home = false
-		this.menu = false
-		this.contact = false
-		this.reservation = false
-		this.avis = false
-		this.portfolio = false
-		this.admin = true
+	    this.toshow = 'admin'
 	  },
 	  showreservation: function () {
-	    this.home = false
-		this.menu = false
-		this.contact = false
-		this.reservation = true
-		this.avis = false
-		this.portfolio = false
-		this.admin = false
+	    this.toshow = 'reservation'
 	  },
 	  showavis: function () {
-	    this.home = false
-		this.menu = false
-		this.contact = false
-		this.reservation = false
-		this.avis = true
-		this.portfolio = false
-		this.admin = false
+	    this.toshow = 'avis'
 	  },
 	  showportfolio: function () {
-	    this.home = false
-		this.menu = false
-		this.contact = false
-		this.reservation = false
-		this.avis = false
-		this.portfolio = true
-		this.admin = false
+	    this.toshow = 'portfolio'
 	  }
     }
   }
 </script>
 
 <style>
-#app{
-  min-height: 100%;
-}
-
 html body {
   height: 100%;
   margin: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  margin: 0;
+}
+
+.fullscreen {
+  /*background-image: url("https://pbs.twimg.com/media/DfkhrO1XUAEYkdw.jpg");*/
+  height: 100%; 
+  
+  background-color: grey;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ul {
@@ -179,10 +149,10 @@ li a:hover {
 }
 
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 1s ease;
 }
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
