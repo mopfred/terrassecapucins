@@ -9,47 +9,48 @@
 	  <li><a href="#" @click="showportfolio">{{ portfolioTitle }}</a></li>
       <li style="float:right;"><a href="#" @click="showadmin">{{ adminTitle }}</a></li>
     </ul>
-	<div class="fullscreen">
-	  <transition name="slide-fade">
-	    <div class="fullscreen" v-if="toshow === 'home'">
-	      <Home></Home>
-	    </div>
-	  </transition>
-	  <transition name="slide-fade">
-	    <div class="fullscreen" v-if="toshow === 'menu'">
-	      <Menu></Menu>
-	    </div>
-	  </transition>
-	  <transition name="slide-fade">
-	    <div class="fullscreen" v-if="toshow === 'contact'">
-	      <Contact></Contact>
-	    </div>
-	  </transition>
-	  <transition name="slide-fade">
-	    <div class="fullscreen" v-if="toshow === 'reservation'">
-	      <Reservation></Reservation>
-	    </div>
-	  </transition>
-	  <transition name="slide-fade">
-	    <div class="fullscreen" v-if="toshow === 'avis'">
-	      <Avis></Avis>
-	    </div>
-	  </transition>
-	  <transition name="slide-fade">
-  	    <div class="fullscreen" v-if="toshow === 'portfolio'">
-	      <Portfolio></Portfolio>
-	    </div>
-	  </transition>
-	  <transition name="slide-fade">
-	    <div class="fullscreen" v-if="toshow === 'admin'">
-	      <Admin></Admin>
-	    </div>
-	  </transition>
-	</div>
+	<transition name="slide-fade">
+	  <div class="fullscreen" v-if="toshow === 'home'">
+	    <BandeauHome></BandeauHome>
+	    <Home></Home>
+	  </div>
+	</transition>
+	<transition name="slide-fade">
+	  <div class="fullscreen" v-if="toshow === 'menu'">
+		<BandeauHome></BandeauHome>
+	    <Menu></Menu>
+	  </div>
+	</transition>
+	<transition name="slide-fade">
+	  <div class="fullscreen" v-if="toshow === 'contact'">
+	    <Contact></Contact>
+	  </div>
+	</transition>
+	<transition name="slide-fade">
+	  <div class="fullscreen" v-if="toshow === 'reservation'">
+	    <Reservation></Reservation>
+	  </div>
+	</transition>
+	<transition name="slide-fade">
+	  <div class="fullscreen" v-if="toshow === 'avis'">
+	    <Avis></Avis>
+	  </div>
+	</transition>
+	<transition name="slide-fade">
+  	  <div class="fullscreen" v-if="toshow === 'portfolio'">
+	    <Portfolio></Portfolio>
+	  </div>
+	</transition>
+	<transition name="slide-fade">
+	  <div class="fullscreen" v-if="toshow === 'admin'">
+	    <Admin></Admin>
+	  </div>
+	</transition>
   </div>
 </template>
 
 <script>
+import BandeauHome from './templates/BandeauHome.vue'
 import Home from './templates/Home.vue'
 import Menu from './templates/Menu.vue'
 import Contact from './templates/Contact.vue'
@@ -59,7 +60,7 @@ import Portfolio from './templates/Portfolio.vue'
 import Admin from './templates/Admin.vue'
 
   export default {
-    components: { Home, Menu, Contact, Reservation, Avis, Portfolio, Admin },
+    components: { BandeauHome, Home, Menu, Contact, Reservation, Avis, Portfolio, Admin },
     data () {
       return {
 	    toshow: 'home',
@@ -110,13 +111,13 @@ html body {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 .fullscreen {
   /*background-image: url("https://pbs.twimg.com/media/DfkhrO1XUAEYkdw.jpg");*/
-  height: 100%; 
+  height: 100%;
   
   background-color: grey;
   background-position: center;
@@ -130,10 +131,14 @@ ul {
   margin: 0;
   overflow: hidden;
   background-color: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 li {
   float: left;
+  height: 5%;
 }
 
 li a {
