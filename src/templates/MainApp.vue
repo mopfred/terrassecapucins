@@ -47,7 +47,7 @@ import Admin from './Admin.vue'
 		adminTitle: 'Admin',
 		bandeauDTO: {
 		  tab: 'home',
-		  titleUp: 'Acceuil',
+		  titleUp: 'Accueil',
 		  titleDown: 'Bienvenue'
 		}
       }
@@ -55,13 +55,13 @@ import Admin from './Admin.vue'
     methods: {
       showhome: function () {
 		this.bandeauDTO.tab = 'home'
-		this.bandeauDTO.titleUp = 'Acceuil'
+		this.bandeauDTO.titleUp = 'Accueil'
 		this.bandeauDTO.titleDown = 'Bienvenue'
 	  },
 	  showmenu: function () {
 		this.bandeauDTO.tab = 'menu'
 		this.bandeauDTO.titleUp = 'La carte'
-		this.bandeauDTO.titleDown = 'La terrasse des cappucins'
+		this.bandeauDTO.titleDown = 'La terrasse des capucins'
 	  },
 	  showportfolio: function () {
 		this.bandeauDTO.tab = 'portfolio'
@@ -90,10 +90,9 @@ import Admin from './Admin.vue'
 }
 
 .fullscreen {
-  /*background-image: url("https://pbs.twimg.com/media/DfkhrO1XUAEYkdw.jpg");*/
-  height: 100%;
+
   
-  background-color: grey;
+  background-color: white;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
