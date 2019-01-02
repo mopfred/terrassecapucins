@@ -65,11 +65,11 @@
 
 <script>
   export default {
-	props: {
-	  tab: String,
-	  titleUp: String,
-	  titleDown: String
-	},
+    props: {
+      tab: String,
+      titleUp: String,
+      titleDown: String
+    },
     data () {
       return {
       }

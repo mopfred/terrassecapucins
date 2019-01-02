@@ -1,0 +1,7 @@
+{
+  "menu":{
+    "entree":["testEntree1","testEntree2"],
+    "plat":["testPlat1","testPlat2"],
+    "dessert":["testDessert1", "testDessert2"]
+  }
+}

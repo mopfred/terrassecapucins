@@ -3,7 +3,7 @@
   <ul>
     <li><a href="#" @click="showhome">{{ homeTitle }}</a></li>
     <li><a href="#" @click="showmenu">{{ menuTitle }}</a></li>
-	<li><a href="#" @click="showportfolio">{{ portfolioTitle }}</a></li>
+    <li><a href="#" @click="showportfolio">{{ portfolioTitle }}</a></li>
     <li style="float:right;"><a href="#" @click="showadmin">{{ adminTitle }}</a></li>
   </ul>
   <Bandeau v-bind="bandeauDTO"></Bandeau>
@@ -41,38 +41,38 @@ import Admin from './Admin.vue'
     components: { Bandeau, Home, Menu, Portfolio, Admin },
     data () {
       return {
-		homeTitle: 'Accueil',
-		menuTitle: 'La carte',
-		portfolioTitle: 'Portfolio',
-		adminTitle: 'Admin',
-		bandeauDTO: {
-		  tab: 'home',
-		  titleUp: 'Accueil',
-		  titleDown: 'Bienvenue'
-		}
+        homeTitle: 'Accueil',
+        menuTitle: 'La carte',
+        portfolioTitle: 'Portfolio',
+        adminTitle: 'Admin',
+        bandeauDTO: {
+          tab: 'home',
+          titleUp: 'Accueil',
+          titleDown: 'Bienvenue'
+        }
       }
     },
     methods: {
       showhome: function () {
-		this.bandeauDTO.tab = 'home'
-		this.bandeauDTO.titleUp = 'Accueil'
-		this.bandeauDTO.titleDown = 'Bienvenue'
-	  },
-	  showmenu: function () {
-		this.bandeauDTO.tab = 'menu'
-		this.bandeauDTO.titleUp = 'La carte'
-		this.bandeauDTO.titleDown = 'La terrasse des capucins'
-	  },
-	  showportfolio: function () {
-		this.bandeauDTO.tab = 'portfolio'
-		this.bandeauDTO.titleUp = 'Portfolio'
-		this.bandeauDTO.titleDown = 'Pour vous donner l\'envie de venir'
-	  },
-	  showadmin: function () {
-	    this.bandeauDTO.tab = 'admin'
-		this.bandeauDTO.titleUp = 'Administration'
-		this.bandeauDTO.titleDown = 'Partie réservée'
-	  }
+        this.bandeauDTO.tab = 'home'
+        this.bandeauDTO.titleUp = 'Accueil'
+        this.bandeauDTO.titleDown = 'Bienvenue'
+      },
+      showmenu: function () {
+        this.bandeauDTO.tab = 'menu'
+        this.bandeauDTO.titleUp = 'La carte'
+        this.bandeauDTO.titleDown = 'La terrasse des capucins'
+      },
+      showportfolio: function () {
+        this.bandeauDTO.tab = 'portfolio'
+        this.bandeauDTO.titleUp = 'Portfolio'
+        this.bandeauDTO.titleDown = 'Pour vous donner l\'envie de venir'
+      },
+      showadmin: function () {
+        this.bandeauDTO.tab = 'admin'
+        this.bandeauDTO.titleUp = 'Administration'
+        this.bandeauDTO.titleDown = 'Partie réservée'
+      }
     }
   }
 </script>
@@ -90,8 +90,6 @@ import Admin from './Admin.vue'
 }
 
 .fullscreen {
-
-  
   background-color: white;
   background-position: center;
   background-repeat: no-repeat;

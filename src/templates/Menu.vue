@@ -1,28 +1,42 @@
 <template>
   <div class="fullscreen2">
-	.
-	<div class="mainDiv">
-		<div class="contentMainDiv">
-			<h3>Entrées</h3>
-		</div>
-		<div class="separator_line"/>
-		<div class="contentMainDiv">
-			<h3>Plats</h3>
-		</div>
-		<div class="separator_line"/>
-		<div class="contentMainDiv">
-			<h3>Desserts</h3>
-		</div>
-		<div class="separator_line"/>
-	</div>
+    .
+    <div class="mainDiv">
+      <div class="contentMainDiv">
+        <h3>Entrées</h3>
+        {{contentEntrees}}
+        <!--tr v-for="(item) in contentEntrees">
+          <td>item</td>
+        </tr-->
+      </div>
+      <div class="separator_line"/>
+      <div class="contentMainDiv">
+        <h3>Plats</h3>
+        {{contentPlats}}
+      </div>
+      <div class="separator_line"/>
+      <div class="contentMainDiv">
+        <h3>Desserts</h3>
+        {{contentDesserts}}
+      </div>
+      <div class="separator_line"/>
+    </div>
   </div>
 </template>
 
 <script>
+  import menuJson from '../json/menu.json';
+
   export default {
     data () {
       return {
+        menuJson
       }
+    },
+    created () {
+      this.contentEntrees = menuJson.menu.entree;
+      this.contentPlats = menuJson.menu.plat;
+      this.contentDesserts = menuJson.menu.dessert;
     }
   }
 </script>
