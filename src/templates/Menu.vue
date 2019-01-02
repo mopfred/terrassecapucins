@@ -4,20 +4,23 @@
     <div class="mainDiv">
       <div class="contentMainDiv">
         <h3>Entrées</h3>
-        {{contentEntrees}}
-        <!--tr v-for="(item) in contentEntrees">
-          <td>item</td>
-        </tr-->
+        <tr v-for="(item, key) in this.contentEntrees">
+          <td>{{item}}</td>
+        </tr>
       </div>
       <div class="separator_line"/>
       <div class="contentMainDiv">
         <h3>Plats</h3>
-        {{contentPlats}}
+        <tr v-for="(item, key) in this.contentPlats">
+          <td>{{item}}</td>
+        </tr>
       </div>
       <div class="separator_line"/>
       <div class="contentMainDiv">
         <h3>Desserts</h3>
-        {{contentDesserts}}
+        <tr v-for="(item, key) in this.contentDesserts">
+          <td>{{item}}</td>
+        </tr>
       </div>
       <div class="separator_line"/>
     </div>
