@@ -1,7 +1,37 @@
 {
   "menu":{
-    "entree":["testEntree1","testEntree2"],
-    "plat":["testPlat1","testPlat2"],
-    "dessert":["testDessert1", "testDessert2"]
+    "entree":
+	[
+		{
+			"name":"testEntree1",
+			"price":"10"
+		},
+		{
+			"name":"testEntree2",
+			"price":"20"
+		}
+	],
+    "plat":
+	[
+		{
+			"name":"testPlat1",
+			"price":"10"
+		},
+		{
+			"name":"testPlat2",
+			"price":"20"
+		}
+	],
+    "dessert":
+	[
+		{
+			"name":"testDessert1",
+			"price":"10"
+		},
+		{
+			"name":"testDessert2",
+			"price":"20"
+		}
+	]
   }
 }

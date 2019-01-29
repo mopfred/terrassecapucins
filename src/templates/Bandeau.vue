@@ -95,14 +95,13 @@
   transition: all 0s cubic-bezier(0, 0, 0, 0);
 }
 
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
+.slide-fade-enter, .slide-fade-leave-to {
   transform: translateX(-50px);
   opacity: 0;
 }
 
 .page-header {
-  height: 35%;
+  min-height: 30%;
   position: relative;
   width: 100%;
 }
