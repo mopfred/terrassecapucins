@@ -4,23 +4,26 @@
     <div class="mainDiv">
       <div class="contentMainDiv">
         <h3>Entrées</h3>
-        <tr v-for="(item, key) in this.contentEntrees">
-          <td>{{item}}</td>
-        </tr>
+        <div v-for="(item, key) in this.contentEntrees">
+          {{item}}
+          <div class="small_separator_line"/>
+        </div>
       </div>
       <div class="separator_line"/>
       <div class="contentMainDiv">
         <h3>Plats</h3>
-        <tr v-for="(item, key) in this.contentPlats">
-          <td>{{item}}</td>
-        </tr>
+        <div v-for="(item, key) in this.contentPlats">
+          {{item}}
+          <div class="small_separator_line"/>
+        </div>
       </div>
       <div class="separator_line"/>
       <div class="contentMainDiv">
         <h3>Desserts</h3>
-        <tr v-for="(item, key) in this.contentDesserts">
-          <td>{{item}}</td>
-        </tr>
+        <div v-for="(item, key) in this.contentDesserts">
+          {{item}}
+          <div class="small_separator_line"/>
+        </div>
       </div>
       <div class="separator_line"/>
     </div>
@@ -93,11 +96,21 @@
 }
 
 .separator_line {
-    height: 1px;
+  height: 1px;
 	border-bottom: 1px solid #b3b3b3;
 	margin-left: 25%;
 	margin-right: 25%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+.small_separator_line {
+  height: 1px;
+	border-bottom: 1px solid #b3b3b3;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 </style>
