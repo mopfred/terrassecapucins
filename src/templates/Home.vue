@@ -72,6 +72,7 @@
   margin-right: 30%;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  min-width:400px;
 }
 
 .content {

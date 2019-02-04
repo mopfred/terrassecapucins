@@ -28,51 +28,26 @@
 		  <span class="spanContent">{{item.price}} €</span>
         </div>
       </div>
-      <div class="separator_line"/>
     </div>
   </div>
 </template>
 
 <script>
-  import menuJson from '../json/menu.json';
 
   export default {
     data () {
       return {
-        menuJson
+        menuJson: {}
       }
     },
     created () {
-      this.contentEntrees = menuJson.menu.entree;
-      this.contentPlats = menuJson.menu.plat;
-      this.contentDesserts = menuJson.menu.dessert;
+      this.menuJson = JSON.parse(window.localStorage.getItem('menuJson'))
+      this.contentEntrees = this.menuJson.menu.entree;
+      this.contentPlats = this.menuJson.menu.plat;
+      this.contentDesserts = this.menuJson.menu.dessert;
     }
   }
 </script>
 
 <style>
-.fullscreen2 {
-  height: 100%;
-  width: 100%;
-
-  text-align: center;
-  color: white;
-
-  background-color: white;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-.small_separator_line {
-  height: 1px;
-	border-bottom: 1px solid #b3b3b3;
-	margin-left: 40%;
-	margin-right: 40%;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
 </style>
