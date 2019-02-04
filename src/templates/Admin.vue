@@ -3,7 +3,7 @@
     .
     <div class="mainDiv">
       <div class="contentMainDiv">
-        <h1>Login</h1>
+        <h1>Authentification</h1>
         <input type="text" name="username" v-model="input.username" placeholder="Username" />
         <input type="password" name="password" v-model="input.password" placeholder="Password" />
         <button type="button" v-on:click="login()">Login</button>
@@ -19,10 +19,12 @@
           <button id="entreesButton" type="button" v-on:click="addBlock('entrees')">+</button>
           <div id="entrees">
           </div>
+          <br/>
           <label for="platsButton">Plats</label>
           <button id="platsButton" type="button" v-on:click="addBlock('plats')">+</button>
           <div id="plats">
           </div>
+          <br/>
           <label for="dessertsButton">Desserts</label>
           <button id="dessertsButton" type="button" v-on:click="addBlock('desserts')">+</button>
           <div id="desserts">
@@ -39,7 +41,7 @@
   export default {
     data() {
       return {
-        authenticated: 'true',
+        authenticated: 'false',
         input: {
           username: "",
           password: ""

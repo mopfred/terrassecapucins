@@ -47,31 +47,31 @@ import Admin from './Admin.vue'
         adminTitle: 'Admin',
         bandeauDTO: {
           tab: 'home',
-          titleUp: 'Accueil',
-          titleDown: 'Bienvenue'
+          titleUp: 'La terrasse des capucins',
+          titleDown: 'Accueil'
         }
       }
     },
     methods: {
       showhome: function () {
         this.bandeauDTO.tab = 'home'
-        this.bandeauDTO.titleUp = 'Accueil'
-        this.bandeauDTO.titleDown = 'Bienvenue'
+        this.bandeauDTO.titleUp = 'La terrasse des capucins'
+        this.bandeauDTO.titleDown = 'Accueil'
       },
       showmenu: function () {
         this.bandeauDTO.tab = 'menu'
-        this.bandeauDTO.titleUp = 'La carte'
-        this.bandeauDTO.titleDown = 'La terrasse des capucins'
+        this.bandeauDTO.titleUp = 'La terrasse des capucins'
+        this.bandeauDTO.titleDown = 'La carte'
       },
       showportfolio: function () {
         this.bandeauDTO.tab = 'portfolio'
-        this.bandeauDTO.titleUp = 'Portfolio'
-        this.bandeauDTO.titleDown = 'Pour vous donner l\'envie de venir'
+        this.bandeauDTO.titleUp = 'La terrasse des capucins'
+        this.bandeauDTO.titleDown = 'Portfolio'
       },
       showadmin: function () {
         this.bandeauDTO.tab = 'admin'
-        this.bandeauDTO.titleUp = 'Administration'
-        this.bandeauDTO.titleDown = 'Partie réservée'
+        this.bandeauDTO.titleUp = 'La terrasse des capucins'
+        this.bandeauDTO.titleDown = 'Administration'
       }
     }
   }
