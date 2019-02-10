@@ -46,6 +46,9 @@
           username: "",
           password: ""
         },
+        contentEntrees: [],
+        contentPlats: [],
+        contentDesserts: [],
         menuJson: {}
       }
     },
@@ -102,20 +105,34 @@
         var platsPrice = document.getElementsByName("platsPrice");
         var dessertsPrice = document.getElementsByName("dessertsPrice");
         
+        for(var i = 0; i < this.contentEntrees.length; i++){
+          this.contentEntrees.shift()
+        }
+        
         for(var i = 0; i < entreesName.length; i++){
-          this.contentEntrees[i].name = entreesName[i].value
-          this.contentEntrees[i].price = entreesPrice[i].value
+          var template = {name:"",price:""}
+          template.name = entreesName[i].value
+          template.price = entreesPrice[i].value
+          
+          this.contentEntrees[i] = template
         }
         for(var i = 0; i < platsName.length; i++){
-          this.contentPlats[i].name = platsName[i].value
-          this.contentPlats[i].price = platsPrice[i].value
+          var template = {name:"",price:""}
+          template.name = platsName[i].value
+          template.price = platsPrice[i].value
+          
+          this.contentPlats[i] = template
         }
         for(var i = 0; i < dessertsName.length; i++){
-          this.contentDesserts[i].name = dessertsName[i].value
-          this.contentDesserts[i].price = dessertsPrice[i].value
+          var template = {name:"",price:""}
+          template.name = dessertsName[i].value
+          template.price = dessertsPrice[i].value
+          
+          this.contentDesserts[i] = template
         }
         
         const data = JSON.stringify(this.menuJson)
+        console.log(data)
         window.localStorage.setItem('menuJson', data);
       }
     }

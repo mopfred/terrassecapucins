@@ -4,8 +4,13 @@
   <div class="page-header_in">
     <div class="page-header_item">
 	  <div class="pheader_item_in">
-        <transition name="slide-fade" mode="out-in">
+    <transition name="slide-fade" mode="out-in">
 		  <div class="font" v-if="tab === 'home'">
+	        {{ titleUp }}
+	      </div>
+		</transition>
+    <transition name="slide-fade" mode="out-in">
+		  <div class="font" v-if="tab === 'infos'">
 	        {{ titleUp }}
 	      </div>
 		</transition>
@@ -23,7 +28,7 @@
 		  <div class="font" v-if="tab === 'admin'">
 	        {{ titleUp }}
 	      </div>
-	    </transition>
+	  </transition>
 		<div class="page-title_separator">
 		  <div class="ptitle-separator_container">
 			<div class="ptitle-separator_in">
@@ -39,6 +44,11 @@
 		</div>
 		<transition name="slide-fade" mode="out-in">
 	      <div class="font" v-if="tab === 'home'">
+	        {{ titleDown }}
+	      </div>
+		</transition>
+    <transition name="slide-fade" mode="out-in">
+	      <div class="font" v-if="tab === 'infos'">
 	        {{ titleDown }}
 	      </div>
 		</transition>

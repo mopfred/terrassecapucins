@@ -3,39 +3,14 @@
 	.
 	<div class="mainDiv">
 		<div class="contentMainDiv">
-			<h3>Infos pratiques</h3>
-			<span>11 rue des capucins 62000 Arras <br> 03 21 60 12 17</span>
-			<br>
-			<span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=terrasse+capucins+11+rue+des+capucins++62000+arras+fr" target="_blank" class="btn-link">Itineraire</a></span>
-		</div>
-		<div class="separator_line"/>
-		<div class="contentMainDiv">
-			<h3>Horaires</h3>
-			<div class="content">
-				<span class="spanContent">Lundi-Jeudi</span>
-				<span class="sepContent"/>
-				<span class="spanContent">11h45 - 14h00</span>
-			</div>
-			<div class="content">
-				<span class="spanContent">Vendredi-Samedi</span>
-				<span class="sepContent"/>
-				<span class="spanContent">11h45 - 14h00<br>18h45 - 00h00</span>
-			</div>
-			<div class="content">
-				<span class="spanContent">Dimanche</span>
-				<span class="sepContent"/>
-				<span class="spanContent">Fermé</span>
-			</div>
-		</div>
-		<div class="separator_line"/>
-		<div class="contentMainDiv">
-			<h3>Cuisine</h3>
-			Gastronomique, Française
-		</div>
-		<div class="separator_line"/>
-		<div class="contentMainDiv">
-			<h3>Caractéristiques</h3>
-			Plats à emporter, Réservations, Terrasse, Places assises, Service en salle, Chaises hautes disponibles, Sert de l'alcool, Bières & Vins, Accepte les cartes bancaires
+			<h3>Du frais sans se lasser...</h3>
+			Tout commence par le mélange de l’envie d’entreprendre et la passion de bien manger.. ( Comme Chez Mamie)<br/>
+      En découle le projet de La Terrasse Des Capucins,  un décor sobre sans trop de chichi, une cuisine simple mais tellement gourmande et enfin une envie débordante de faire plaisir à notre clientèle.<br/>
+      Ensuite on s’est posé la question suivante , “Comment avoir que des PRODUITS FRAIS à notre carte?”<br/>
+      On a trouvé la réponse : Une Carte à l’ardoise qui change TOUTE LES SEMAINES avec une planche apéritive, 4 plats et 3 desserts.<br/>
+      On vous en a déjà dit pas mal... on vous laisse venir découvrir par vous même !!<br/>
+      <br/>Au plaisir de vous accueillir,<br/>
+      L’équipe de La Terrasse.
 		</div>
 	</div>
 </div>

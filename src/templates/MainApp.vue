@@ -1,15 +1,21 @@
 <template>
 <div id="mainapp">
   <ul>
-    <li><a href="#" @click="showhome">{{ homeTitle }}</a></li>
-    <li><a href="#" @click="showmenu">{{ menuTitle }}</a></li>
-    <li><a href="#" @click="showportfolio">{{ portfolioTitle }}</a></li>
-    <li style="float:right;"><a href="#" @click="showadmin">{{ adminTitle }}</a></li>
+    <li><a href="#" @click="showHome">{{ homeTitle }}</a></li>
+    <li><a href="#" @click="showInfos">{{ infosTitle }}</a></li>
+    <li><a href="#" @click="showMenu">{{ menuTitle }}</a></li>
+    <li><a href="#" @click="showPortfolio">{{ portfolioTitle }}</a></li>
+    <li style="float:right;"><a href="#" @click="showAdmin">{{ adminTitle }}</a></li>
   </ul>
   <Bandeau v-bind="bandeauDTO"></Bandeau>
   <transition name="slide-fade">
 	<div class="fullscreen" v-if="bandeauDTO.tab === 'home'">
 	  <Home></Home>
+	</div>
+  </transition>
+  <transition name="slide-fade">
+	<div class="fullscreen" v-if="bandeauDTO.tab === 'infos'">
+	  <Infos></Infos>
 	</div>
   </transition>
   <transition name="slide-fade">
@@ -36,12 +42,14 @@ import Home from './Home.vue'
 import Menu from './Menu.vue'
 import Portfolio from './Portfolio.vue'
 import Admin from './Admin.vue'
+import Infos from './Infos.vue'
 
   export default {
-    components: { Bandeau, Home, Menu, Portfolio, Admin },
+    components: { Bandeau, Home, Infos, Menu, Portfolio, Admin },
     data () {
       return {
         homeTitle: 'Accueil',
+        infosTitle: 'Informations',
         menuTitle: 'La carte',
         portfolioTitle: 'Portfolio',
         adminTitle: 'Admin',
@@ -53,22 +61,27 @@ import Admin from './Admin.vue'
       }
     },
     methods: {
-      showhome: function () {
+      showHome: function () {
         this.bandeauDTO.tab = 'home'
         this.bandeauDTO.titleUp = 'La terrasse des capucins'
         this.bandeauDTO.titleDown = 'Accueil'
       },
-      showmenu: function () {
+      showInfos: function () {
+        this.bandeauDTO.tab = 'infos'
+        this.bandeauDTO.titleUp = 'La terrasse des capucins'
+        this.bandeauDTO.titleDown = 'Informations pratiques'
+      },
+      showMenu: function () {
         this.bandeauDTO.tab = 'menu'
         this.bandeauDTO.titleUp = 'La terrasse des capucins'
         this.bandeauDTO.titleDown = 'La carte'
       },
-      showportfolio: function () {
+      showPortfolio: function () {
         this.bandeauDTO.tab = 'portfolio'
         this.bandeauDTO.titleUp = 'La terrasse des capucins'
         this.bandeauDTO.titleDown = 'Portfolio'
       },
-      showadmin: function () {
+      showAdmin: function () {
         this.bandeauDTO.tab = 'admin'
         this.bandeauDTO.titleUp = 'La terrasse des capucins'
         this.bandeauDTO.titleDown = 'Administration'
